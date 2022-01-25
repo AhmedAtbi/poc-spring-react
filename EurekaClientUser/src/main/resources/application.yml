@@ -1,0 +1,17 @@
+server:
+  port: 9595
+
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+spring:
+  application:
+    name: user
+
+    
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/auth/realms/My-Realm/protocol/openid-connect/certs    
